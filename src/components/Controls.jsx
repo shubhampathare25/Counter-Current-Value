@@ -13,9 +13,23 @@ const Controls = () => {
     dispatch({ type: "DECREMENT" });
   };
 
+  const handlePrivacyToggle = () => {
+    dispatch({ type: "PRIVACY_TOGGLE" });
+  };
+
   const handleAdd = () => {
     dispatch({
       type: "ADD",
+      payload: {
+        num: inputElement.current.value,
+      },
+    });
+    inputElement.current.value = "";
+  };
+
+  const handleSubtract = () => {
+    dispatch({
+      type: "SUBTRACT",
       payload: {
         num: inputElement.current.value,
       },
@@ -40,8 +54,14 @@ const Controls = () => {
         >
           -1
         </button>
+        <button
+          type="button"
+          class="btn btn-warning"
+          onClick={handlePrivacyToggle}
+        >
+          Privacy Toggle
+        </button>
       </div>
-
       <div
         className="d-grid gap-2 d-sm-flex justify-content-sm-center"
         control-row
@@ -52,11 +72,7 @@ const Controls = () => {
           className="number-input"
           ref={inputElement}
         />
-        <button
-          type="button"
-          className="btn btn-info"
-          onClick={handleAdd}
-        >
+        <button type="button" className="btn btn-info" onClick={handleAdd}>
           Add
         </button>
 
