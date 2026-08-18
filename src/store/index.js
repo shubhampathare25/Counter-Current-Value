@@ -5,17 +5,17 @@ const INITIAl_VALUE = {
   privacy: false
 }
 
-const counterReducer = (store = INITIAl_VALUE, action) => {
+const counterReducer = (store = INITIAl_VALUE, action) => { 
   if (action.type === 'INCREMENT') {
-  return {counter: store.counter + 1};
+  return {...store, counter: store.counter + 1};
   } else if (action.type === 'DECREMENT') {
-    return {counter: store.counter -1};
+    return {...store, counter: store.counter -1};
   } else if (action.type === 'ADD') {
-    return {counter: store.counter + Number(action.payload.num)};
+    return {...store, counter: store.counter + Number(action.payload.num)};
   } else if (action.type === 'SUBTRACT') {
-    return {counter: store.counter - Number(action.payload.num)};
+    return {...store, counter: store.counter - Number(action.payload.num)};
   } else if (action.type === 'PRIVACY_TOGGLE') {
-    return {privacy: !store.privacy};
+    return {...store, privacy: !store.privacy};
   }
   return store;
 }
