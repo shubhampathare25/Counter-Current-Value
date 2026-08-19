@@ -1,16 +1,17 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
+import { counterActions } from "../store";
 
 const Controls = () => {
   const dispatch = useDispatch();
   const inputElement = useRef();
 
   const handleIncrement = () => {
-    dispatch({ type: "INCREMENT" });
+    dispatch(counterActions.increment());
   };
 
   const handleDecrement = () => {
-    dispatch({ type: "DECREMENT" });
+    dispatch(counterActions.decrement());
   };
 
   const handlePrivacyToggle = () => {
@@ -56,7 +57,7 @@ const Controls = () => {
         </button>
         <button
           type="button"
-          class="btn btn-warning"
+          className="btn btn-warning"
           onClick={handlePrivacyToggle}
         >
           Privacy Toggle
