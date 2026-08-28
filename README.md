@@ -24,3 +24,8 @@ Getting Started
    npm run dev
 ```
 4. Open http://localhost:5173 in your browser to use the counter.
+
+## Folder Structure
+* src/components/ – React components for the counter UI
+* src/Store/ – Redux store and slices
+* src/App.jsx – Main application logic
