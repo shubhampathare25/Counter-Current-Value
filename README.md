@@ -9,6 +9,12 @@ This app allows users to increment, decrement, and reset a counter value, with o
 * State management using Redux
 * Built with React and Vite for fast performance
 
+## Tech Stack
+* **Frontend:** React.js, Vite
+* **State Management:** Redux Toolkit
+* **Styling:** CSS3 
+* **Version Control:** Git & GitHub
+
 Getting Started
 1. Clone the repository:
  ```
@@ -29,3 +35,14 @@ Getting Started
 * src/components/ – React components for the counter UI
 * src/Store/ – Redux store and slices
 * src/App.jsx – Main application logic
+
+  ## Key Learnings
+* Built an interactive counter application using **React.js** and **Vite**.
+* Managed global application state efficiently using **Redux Toolkit**.
+* Implemented conditional rendering features like **Privacy Mode** to hide/show sensitive values.
+* Handled user actions (increment, decrement, reset) with clean component-driven architecture.
+
+  ## Future Enhancements
+* Add an input field to set a custom step/value for incrementing/decrementing.
+* Implement local storage to persist the counter state on page refresh.
+* Add dark/light mode toggle.
