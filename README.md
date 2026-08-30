@@ -18,16 +18,18 @@ This app allows users to increment, decrement, and reset a counter value, with o
 Getting Started
 1. Clone the repository:
  ```
-   git clone https://github.com/your-username/Count-Current-Value.git
+    git clone https://github.com/your-username/Count-Current-Value.git
+
     cd Count-Current-Value
 ```
-2. Install dependencies:
+
+2. Install dependencies
    ```
-   npm install
-   ```
-3. Start the development server:
-```
-   npm run dev
+    npm install
+   
+4. Start the development server
+ ```
+    npm run dev
 ```
 4. Open http://localhost:5173 in your browser to use the counter.
 
